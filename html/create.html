@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../dist/init.css">
+    <link rel="stylesheet" href="./../dist/create.css">
+</head>
+
+<body>
+    <div class="headWarp">
+        <div class="head">
+            <a href="javascript:history.go(-1);" class="back-to-previous">
+                <img src="./../img/create/backBtn.png" alt="">
+            </a>
+            <a href="" class="logo">
+                <img src="./../img/logo.webp" alt="" width="120px" height="34px">
+            </a>
+            <div class="header-group">
+                <a href="" class="icon first" target="_self">
+                    <img src="./../img/create/collect.jpg" alt="">
+                </a>
+                <a href="./login.html" class="icon second" target="_self">
+                    <img src="./../img/create/login.jpg" alt="">
+                </a>
+                <a href="javascript:void(0)" class="icon last" target="_self">
+                    <img src="./../img/create/car.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="account">
+        <div class="title">
+            <h1>注册</h1>
+        </div>
+        <p>
+            <span>如您已是Dior美妆店铺会员，请使用会员手机号码注册，系统将自动绑定您的官网帐号并合并您在官网和店铺的Dior美妆购物积分。</span>
+            <span class="asterisk">*为必填项目。</span>
+        </p>
+        <form action="#" method="POST">
+            <div>
+                <label for="">姓*</label>
+                <input type="text" id="fname" name="fname" placeholder="姓" required>
+                <span class="msg"></span>
+            </div>
+            <div>
+                <label for="">名*</label>
+                <input type="text" id="lname" name="lname" placeholder="名" required>
+                <span class="msg"></span>
+            </div>
+            <div>
+                <label for="">电话*</label>
+                <input type="text" id="tel" name="tel" placeholder="电话" required>
+                <span class="msg"></span>
+            </div>
+            <div>
+                <label for="">称谓</label>
+                <select name="gender" id="gender">
+                    <option value="" selected>选择称谓</option>
+                    <option value="">女士</option>
+                    <option value="">小姐</option>
+                    <option value="">先生</option>
+                </select>
+            </div>
+            <div>
+                <label for="">密码*</label>
+                <input type="password" id="password" name="password" placeholder="密码" required>
+                <span class="msg"></span>
+            </div>
+            <div class="buttons-set">
+                <button type="submit" id="register-btn" target="_self"><span>注册</span></button>
+            </div>
+        </form>
+    </div>
+    <div class="footer">
+        <div class="left divCon">
+            <div class="divWrap">
+                <span class="title">国家/地区</span>
+                <div id="button">
+                    <img src="./../img/create/car.jpg" alt="" class="imgLeft">
+                    <span class="txt">中国大陆</span>
+                    <img src="./../img/footer/svg.jpg" alt="" class="imgRight">
+                </div>
+            </div>
+        </div>
+        <div class="center divCon">
+            <ul class="link-ul">
+                <li class="link_li "><a href="#">联系我们</a></li>
+                <li class="link_li "><a href="#">配送及退货</a></li>
+                <li class="link_li "><a href="#">常见问题</a></li>
+                <li class="link_li "><a href="#">使用条款</a></li>
+                <li class="link_li "><a href="#">数据保护章程</a></li>
+            </ul>
+            <ul class="link-bottom">
+                <li><img src="./../img/footer/business.webp" width="10px" height="10px"><a href="#">电子营业执照</a></li>
+                <li><img src="./../img/footer/icp.webp" width="10px" height="10px"><a href="#">沪公网安备31010602002343号</a></li>
+                <li><img src="./../img/footer/icp2.webp" width="10px" height="10px"><a href="#">沪ICP备19005922号</a></li>
+                <li><a href="#">尚圃电子商务（上海）有限公司</a></li>
+                <li><a href="#">上海市南京西路1266号恒隆广场1期29F</a></li>
+            </ul>
+        </div>
+        <div class="right divCon">
+            <span>关注我们</span>
+            <div>
+                <img src="./../img/footer/icon-weixin.png" alt="" class="left">
+                <img src="./../img/footer/weibo.png" alt="" class="right">
+            </div>
+        </div>
+    </div>
+    <!-- 置顶按钮 -->
+    <a href="#" class="button">^</a>
+
+    <script src="./../server/public.js"></script>
+    <script type="module">
+        import RegForm from "./../js/RegForm.js";
+
+        var xhr, form,sex;
+
+        init();
+        function init() {
+            var button = document.querySelector("button");
+            var car = document.querySelector(".last");
+            var fname = document.querySelector("#fname");
+            var lname = document.querySelector("#lname");
+            var tel = document.querySelector("#tel");
+            var gender = document.querySelector("#gender");
+            var password = document.querySelector("#password");
+            var form = document.querySelector('form');
+            form.addEventListener('submit',formSubmitHandler)
+            button.addEventListener("submit", submitHandler);
+            // 点击购物车
+            car.addEventListener("click",clickHandler);
+
+            fname.addEventListener("input", inputHandler);
+            lname.addEventListener("input", inputHandler);
+            tel.addEventListener("input", inputHandler);
+            gender.addEventListener("change",changeHandler);
+            password.addEventListener("input", inputHandler);
+        }
+
+        function changeHandler(e){
+            var index = this.selectedIndex;
+            sex = this.options[index].text;
+        }
+
+        // 获取cookie
+        var cookie = getCookie("status");
+        function clickHandler(e){
+            console.log(cookie);
+            if(!cookie){
+                location.href = "login.html";
+            }else{
+                location.href = "cart.html";
+            }
+        }
+        function formSubmitHandler(e){
+            e.preventDefault();
+            if (!RegForm.allFormVerify(form)) e.preventDefault();
+
+            ajax({
+                url: 'http://localhost:4010/server',
+                type: 'get',
+                data: {
+                    "type":"register",
+                    "fname": fname.value,
+                    "lname": lname.value,
+                    "tel": tel.value,
+                    "gender": sex,
+                    "password": password.value,
+                },
+                success: function (data) {
+                    console.log(JSON.parse(data));
+                    if(data.code === 1){
+                        location.href = "login.html";
+                    }else{
+                        console.log("注册失败");
+                    }
+                },
+                error: function (data) {
+                    console.log(data);
+                }
+            })
+        }
+        function submitHandler(e) {
+            e.preventDefault();
+            console.log(2);
+            if (!RegForm.allFormVerify(form)) e.preventDefault();
+        }
+
+        function inputHandler(e) {
+            RegForm.inputVerify(this, this.nextElementSibling);
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,278 @@
+img,
+fieldset {
+    border: none;
+}
+
+b,
+strong {
+    font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+i,
+em {
+    font-style: normal;
+}
+
+input,
+a {
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+img {
+    display: block;
+}
+
+p {
+    word-wrap: break-word;
+}
+
+.clearBoth:after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+}
+
+$w:980px;
+
+.page {
+    width: $w;
+    height: 407px;
+    margin: auto;
+    margin-top: 38px;
+
+    .pagemain {
+        width: $w;
+        height: 359px;
+
+        h1 {
+            width: 620px;
+            height: 31px;
+            margin: 0;
+            margin-bottom: 15px;
+            margin-left: 180px;
+            padding-bottom: 3px;
+            font-size: 24px !important;
+            font-weight: 600 !important;
+            color: #636363;
+        }
+
+        .loginCreate {
+            width: 618px;
+            height: 308px;
+            border: 1px solid #cdcdcd;
+            margin: 0 180px;
+
+            .content {
+                .dior-title {
+                    margin: 0;
+                    padding: 0;
+                    padding-bottom: 10px;
+                    width: 239px;
+                    height: 19px;
+                    color: #636363;
+                    font-size: 14px;
+                }
+            }
+
+            .login {
+                width: 238px;
+                height: 188px;
+                float: left;
+                margin: 0;
+                padding: 60px 40px 60px 30px;
+
+                .fieldset {
+                    width: 239px;
+                    height: 244px;
+
+                    .account-login-block {
+                        width: 239px;
+                        height: 195px;
+                        margin-top: 20px;
+
+                        .login-form-list {
+                            list-style: none;
+                            margin: 0;
+                            padding: 0;
+
+                            li {
+                                width: 239px;
+                                height: 55px;
+                                margin: 0;
+                                padding: 0;
+                                position: relative;
+
+                                label {
+                                    display: inline-block;
+                                    line-height: 30px;
+                                    font-size: 12px;
+                                    margin: 0;
+                                    padding: 0;
+                                    width: 45px;
+                                    height: 30px;
+                                    float: left;
+                                }
+
+                                .input-box {
+                                    width: 180px;
+                                    height: 50px;
+                                    border: "1px solid #ebebeb";
+                                    float: right;
+
+                                    .input-text {
+                                        width: 162px;
+                                        height: 28px;
+                                        padding: 0 8px;
+                                        background: #ebebeb;
+                                        border: 1px solid #ebebeb;
+                                        margin-bottom: 6px;
+                                        display: block;
+                                        border-radius: 5px;
+                                        font-size: 11px;
+                                        line-height: 28px;
+                                    }
+
+                                    .msg {
+                                        padding: 0;
+                                        margin: 0;
+                                        display: block;
+                                        width: 162px;
+                                        height: 20px;
+                                        position: absolute;
+                                        left: 60px;
+                                        top: 30px;
+                                        font-size: 10px;
+                                        color: red;
+                                    }
+                                }
+                            }
+
+                            .quick-checkbox {
+                                span {
+                                    display: block;
+                                    float: left;
+                                    width: 26px;
+                                    height: 32px;
+                                }
+
+                                p {
+                                    padding: 0;
+                                    margin: 0;
+                                    width: 212px;
+                                    height: 32px;
+                                    float: left;
+                                    color: #969595;
+                                    line-height: 15px;
+                                    font-size: 12px;
+                                }
+                            }
+
+                            .loginbtn {
+                                float: right;
+                                width: 54px;
+                                height: 28px;
+                                background: #000000;
+                                border-radius: 15px;
+                                line-height: 14px;
+                                position: absolute;
+                                left: 180px;
+
+                                span {
+                                    width: 24px;
+                                    height: 15px;
+                                    font-size: 12px;
+                                    color: #ffffff;
+                                    position: absolute;
+                                    left: 15px;
+                                    top: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .regist {
+                float: left;
+                width: 210px;
+                height: 180px;
+                margin-left: 50px;
+                margin-top: 60px;
+
+                .form-instructions {
+                    padding: 0;
+                    margin-top: 20px;
+                    width: 208px;
+                    height: 40px;
+                    font-size: 12px;
+                    line-height: 20px;
+                    color: #636363;
+                }
+
+                .button-set {
+                    width: 210px;
+                    height: 20px;
+                    padding-top: 50px;
+
+                    .gtm_register_btn {
+                        margin: auto;
+                        padding: 0;
+                        display: block;
+                        width: 176px;
+                        height: 28px;
+                        border: 1px solid #000;
+                        ;
+                        text-decoration: none;
+                        color: #000;
+                        text-align: center;
+                        border-radius: 30px;
+
+                        span {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .pagefooter {
+        width: $w;
+        height: 32px;
+        margin-top: 16px;
+        text-align: center;
+        font-size: 10px;
+        color: #5e5e5e;
+    }
+}

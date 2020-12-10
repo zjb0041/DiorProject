@@ -1,0 +1,163 @@
+html {
+  width: 100%; }
+
+body {
+  width: 100%; }
+
+.headWarp {
+  width: 100%;
+  height: 84px;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 30px; }
+  .headWarp .head {
+    width: 900px;
+    height: 84px;
+    margin: auto;
+    position: relative; }
+    .headWarp .head a {
+      text-decoration: none; }
+    .headWarp .head .back-to-previous {
+      display: block;
+      width: 15px;
+      height: 30px;
+      float: left;
+      position: absolute;
+      top: 52px; }
+      .headWarp .head .back-to-previous img {
+        width: 8.5px;
+        height: 15px; }
+    .headWarp .head .logo {
+      float: left;
+      position: relative;
+      top: 50px;
+      left: 400px;
+      right: 400px; }
+    .headWarp .head .header-group {
+      width: 120px;
+      height: 23px;
+      float: right;
+      position: relative;
+      top: 52px; }
+      .headWarp .head .header-group .icon {
+        width: 23px;
+        height: 23px;
+        float: left;
+        display: block;
+        margin-right: 25px; }
+      .headWarp .head .header-group .last {
+        margin-right: 0; }
+
+.footer {
+  clear: both;
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 78px;
+  height: 340px;
+  width: 1289px;
+  padding: 30px;
+  border-top: 1px solid #e0e0e0; }
+  .footer .divCon {
+    width: 425px;
+    height: 340px;
+    float: left;
+    position: relative; }
+  .footer .left .divWrap {
+    position: absolute;
+    left: 44px;
+    top: 100px;
+    text-align: center; }
+  .footer .left .title {
+    margin-bottom: 15px;
+    font-size: 15px;
+    line-height: 30px; }
+  .footer .left #button {
+    width: 335px;
+    height: 50px;
+    border-radius: 60px;
+    border: 1px solid black;
+    position: relative; }
+    .footer .left #button .imgLeft {
+      position: absolute;
+      left: 21px;
+      top: 12px; }
+    .footer .left #button .txt {
+      display: block;
+      position: absolute;
+      left: 134px;
+      top: 11px; }
+    .footer .left #button .imgRight {
+      position: absolute;
+      top: 17px;
+      right: 21px; }
+  .footer .center {
+    position: relative; }
+    .footer .center .link-ul {
+      margin: auto;
+      margin-top: 34px; }
+      .footer .center .link-ul li {
+        width: 90px;
+        height: 40px;
+        margin: auto; }
+      .footer .center .link-ul .link_li {
+        list-style: none; }
+        .footer .center .link-ul .link_li a {
+          color: black;
+          font-size: 15px;
+          text-align: center;
+          display: block; }
+    .footer .center .link-bottom {
+      position: absolute;
+      left: 110px;
+      top: 222px;
+      width: 220px;
+      height: 80px;
+      padding: 15px;
+      font-size: 12px;
+      margin: 0; }
+      .footer .center .link-bottom li {
+        width: 220px;
+        height: 22px;
+        list-style: none; }
+        .footer .center .link-bottom li img {
+          float: left;
+          margin-top: 3px;
+          margin-right: 3px; }
+        .footer .center .link-bottom li a {
+          text-decoration: none;
+          color: #757575;
+          float: left; }
+  .footer .right {
+    position: relative; }
+    .footer .right span {
+      position: absolute;
+      top: 144px;
+      left: 197px; }
+    .footer .right img {
+      display: inline;
+      position: absolute;
+      top: 180px; }
+    .footer .right .left {
+      left: 143px; }
+    .footer .right .right {
+      left: 264px; }
+
+.button {
+  display: block;
+  text-decoration: none;
+  color: black;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: floralwhite;
+  border: 1px solid black;
+  box-shadow: 3px 3px 3px #CCCCCC;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 50px;
+  line-height: 70px;
+  text-align: center;
+  user-select: none;
+  display: block; }
+
+/*# sourceMappingURL=init.css.map */

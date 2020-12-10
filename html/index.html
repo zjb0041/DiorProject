@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../dist/init.css">
+    <link rel="stylesheet" href="./../dist/index.css">
+</head>
+
+<body>
+    <div class="headWarp">
+        <div class="head">
+            <a href="" class="logo" id="logo">
+                <img src="./../img/logo.webp" alt="" width="120px" height="34px">
+            </a>
+            <div class="header-group">
+                <a href="" class="icon" target="_self">
+                    <img src="./../img/create/collect.jpg" alt="">
+                </a>
+                <a href="./login.html" class="icon" target="_self">
+                    <img src="./../img/create/login.jpg" alt="">
+                </a>
+                <a href="javascript:void(0)" class="icon last" target="_self">
+                    <img src="./../img/create/car.jpg" alt="">
+                </a>
+            </div>
+            <div class="good-title">
+                <ul id="navigation-desktop-menu">
+                    <a href="#">
+                        <li class="navigation-tab"><span>臻选之礼</span></li>
+                    </a>
+                    <a href="#">
+                        <li class="navigation-tab"><span>女士精品</span></li>
+                    </a>
+                    <a href="#">
+                        <li class="navigation-tab"><span>男士精品</span></li>
+                    </a>
+                    <a href="./goodList.html">
+                        <li class="navigation-tab perfume"><span>香氛</span></li>
+                    </a>
+                    <a href="#">
+                        <li class="navigation-tab"><span>彩妆</span></li>
+                    </a>
+                    <a href="#">
+                        <li class="navigation-tab"><span>护肤</span></li>
+                    </a>
+                    <a href="#">
+                        <li class="navigation-tab"><span>精品童装</span></li>
+                    </a>
+                    <a href="#">
+                        <li class="navigation-tab"><span>家居</span></li>
+                    </a>
+                    <a href="#">
+                        <li class="navigation-tab"><span>邂逅迪奥</span></li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 轮播图 -->
+    <div class="crousel"></div>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="left divCon">
+            <div class="divWrap">
+                <span class="title">国家/地区</span>
+                <div id="button">
+                    <img src="./../img/create/car.jpg" alt="" class="imgLeft">
+                    <span class="txt">中国大陆</span>
+                    <img src="./../img/footer/svg.jpg" alt="" class="imgRight">
+                </div>
+            </div>
+        </div>
+        <div class="center divCon">
+            <ul class="link-ul">
+                <li class="link_li "><a href="#">联系我们</a></li>
+                <li class="link_li "><a href="#">配送及退货</a></li>
+                <li class="link_li "><a href="#">常见问题</a></li>
+                <li class="link_li "><a href="#">使用条款</a></li>
+                <li class="link_li "><a href="#">数据保护章程</a></li>
+            </ul>
+            <ul class="link-bottom">
+                <li><img src="./../img/footer/business.webp" width="10px" height="10px"><a href="#">电子营业执照</a></li>
+                <li><img src="./../img/footer/icp.webp" width="10px" height="10px"><a href="#">沪公网安备31010602002343号</a>
+                </li>
+                <li><img src="./../img/footer/icp2.webp" width="10px" height="10px"><a href="#">沪ICP备19005922号</a></li>
+                <li><a href="#">尚圃电子商务（上海）有限公司</a></li>
+                <li><a href="#">上海市南京西路1266号恒隆广场1期29F</a></li>
+            </ul>
+        </div>
+        <div class="right divCon">
+            <span>关注我们</span>
+            <div>
+                <img src="./../img/footer/icon-weixin.png" alt="" class="left">
+                <img src="./../img/footer/weibo.png" alt="" class="right">
+            </div>
+        </div>
+    </div>
+
+    <!-- 置顶按钮 -->
+    <a href="#" class="button">^</a>
+
+    <script src="./../server/public.js"></script>
+    <script type="module">
+        var car = document.querySelector(".last");
+
+        // 点击购物车
+        car.addEventListener("click", clickHandler);
+
+        // 获取cookie
+        var cookie = getCookie("status");
+        function clickHandler(e) {
+            console.log(cookie);
+            if (!cookie.length) {
+                location.href = "login.html";
+            } else {
+                location.href = "car.html";
+            }
+        }
+
+        import Carousel from "./../js/Carousel.js";
+        animation();
+        var arr = [
+            "./../img/index/crousel1.webp",
+            "./../img/index/crousel2.jpg",
+            "./../img/index/crousel3.webp",
+            "./../img/index/crousel4.webp",
+            "./../img/index/left.png",
+            "./../img/index/right.png",
+        ];
+        let carousel = new Carousel(arr);
+        carousel.appendTo(".crousel");
+        carousel.setWH(1309, 500);
+
+        function animation() {
+            requestAnimationFrame(animation);
+            Carousel.UPDATE();
+        }
+    </script>
+</body>
+
+</html>

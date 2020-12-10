@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        
+    </ul>
+    <script>
+        var json = {
+            "color" : "红色",
+            "price" : 4000,
+        }
+        var ul = document.querySelector('ul');
+ 
+
+        for( var attr in json){
+            var li = document.createElement('li');
+            li.textContent = json[attr];
+            ul.appendChild(li);
+        }
+    </script>
+</body>
+</html>

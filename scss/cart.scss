@@ -1,0 +1,118 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+#main{
+    width: 984px;
+    min-height: 588px;
+    margin: auto;
+    margin-bottom: 110px;
+    padding-top: 60px;
+}
+
+.cart{
+    width: 690px;
+    min-height: 547px;
+    padding: 30px 0;
+    float: left;
+    margin-right: 13px;
+    box-shadow: 0 0 30px 0 #cfcfd0;
+    span{
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
+    .pagetitle{
+        font-size: 27px;
+        font-family: "Century-Gothic", Arial, sans-serif;
+        font-weight: 600;
+        color: #636363;
+        height: 49px;
+        margin-bottom: 20px;
+    }
+    .middle,.last{
+        height: 24px;
+        line-height: 24px;
+        font-size: 14px;
+        color: #636363;
+    }
+    .last{
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
+
+.account{
+    width: 236px;
+    height: 648px;
+    padding: 0px 22px 30px;
+    float: left;
+    .top{
+        width: 236px;
+        height: 411px;
+        padding-top: 30px;
+        box-shadow: 0 0 30px 0 #cfcfd0;
+        .txt-title{
+            width: 236px;
+            height: 21px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            display: block;
+        }
+        .col{
+            width: 236px;
+            height: 150px;
+            margin-bottom: 30px;
+            span{
+                display: block;
+                background: url(../img/contacts_icon.png) no-repeat left center;
+                font-size: 14px;
+                padding-left: 30px;
+                height: 30px;
+                line-height: 35px;
+            }
+            .tunnel-contacts{
+                list-style: none;
+                padding: 0;
+                li{
+                    width: 206px;
+                    height: 40px;
+                    margin-top: 20px;
+                    margin-left: 30px;
+                    line-height: 20px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    .bottom{
+        
+        width: 192px;
+        height: 109px;
+        padding: 30px 22px;
+        box-shadow: 0 0 30px 0 #cfcfd0;
+        margin-bottom: 10px;
+        color: #818181;
+        padding-bottom: 28px;
+        line-height: 16px;
+        span{
+            display: block;
+            width: 192px;
+            height: 16px;
+            margin-top: 18px;
+            margin-bottom: 4px;
+            color: #000;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        .pres{
+            border-bottom: 1px solid #d9d9d9;
+            font-size: 14px;
+            padding-bottom: 16px;
+            color: #000;
+            margin: 0;
+        }
+    }
+}

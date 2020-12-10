@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../dist/init.css">
+    <link rel="stylesheet" href="./../dist/login.css">
+</head>
+
+<body>
+    <div class="headWarp">
+        <div class="head">
+            <a href="javascript:history.go(-1);" class="back-to-previous">
+                <img src="./../img/create/backBtn.png" alt="">
+            </a>
+            <a href="" class="logo">
+                <img src="./../img/logo.webp" alt="" width="120px" height="34px">
+            </a>
+            <div class="header-group">
+                <a href="" class="icon" target="_self">
+                    <img src="./../img/create/collect.jpg" alt="">
+                </a>
+                <a href="./login.html" class="icon" target="_self">
+                    <img src="./../img/create/login.jpg" alt="">
+                </a>
+                <a href="javascript:void(0)" class="icon last" target="_self">
+                    <img src="./../img/create/car.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="pagemain">
+            <h1>登陆或创建用户</h1>
+            <div class="loginCreate">
+                <div class="login">
+                    <div class="content fieldset">
+                        <p class="dior-title">
+                            <span class="tab-text">密码登录</span>
+                        </p>
+                        <div class="account-login-block">
+                            <form action="" method="POST" id="login-form-block">
+                                <ul class="login-form-list">
+                                    <li>
+                                        <label for="">手机号*</label>
+                                        <div class="input-box">
+                                            <input type="text" placeholder="手机号" class="input-text" id="tel" name="tel"
+                                                required>
+                                            <span class="msg"></span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label for="">密码*</label>
+                                        <div class="input-box">
+                                            <input type="password" placeholder="密码" class="input-text" id="password"
+                                                name="password" required>
+                                            <span class="msg"></span>
+                                        </div>
+                                    </li>
+                                    <li class="quick-checkbox">
+                                        <span><input type="checkbox" id="checkbox"></span>
+                                        <p>我已阅读并接受个人信息收集声明网站使用和销售条款</p>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <button type="submit" class="loginbtn"><span>登录</span></button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="regist">
+                    <div class="content">
+                        <p class="dior-title">注册Dior账户</p>
+                        <p class="form-instructions">
+                            注册Dior账号以便追踪您的订单,
+                            <br>
+                            管理收货地址，获取更多个性化信息
+                        </p>
+                    </div>
+                    <div class="button-set">
+                        <a href="./create.html" target="_self" class="gtm_register_btn">
+                            <span>创建账户</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pagefooter">
+            *请妥善保管您的注册账户信息，勿将账号及密码随意泄露给他人。
+            <br>
+            请注意，您的账户注册手机号为迪奥识别及验证您账户身份的唯一依据。
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="left divCon">
+            <div class="divWrap">
+                <span class="title">国家/地区</span>
+                <div id="button">
+                    <img src="./../img/create/car.jpg" alt="" class="imgLeft">
+                    <span class="txt">中国大陆</span>
+                    <img src="./../img/footer/svg.jpg" alt="" class="imgRight">
+                </div>
+            </div>
+        </div>
+        <div class="center divCon">
+            <ul class="link-ul">
+                <li class="link_li "><a href="#">联系我们</a></li>
+                <li class="link_li "><a href="#">配送及退货</a></li>
+                <li class="link_li "><a href="#">常见问题</a></li>
+                <li class="link_li "><a href="#">使用条款</a></li>
+                <li class="link_li "><a href="#">数据保护章程</a></li>
+            </ul>
+            <ul class="link-bottom">
+                <li><img src="./../img/footer/business.webp" width="10px" height="10px"><a href="#">电子营业执照</a></li>
+                <li><img src="./../img/footer/icp.webp" width="10px" height="10px"><a href="#">沪公网安备31010602002343号</a></li>
+                <li><img src="./../img/footer/icp2.webp" width="10px" height="10px"><a href="#">沪ICP备19005922号</a></li>
+                <li><a href="#">尚圃电子商务（上海）有限公司</a></li>
+                <li><a href="#">上海市南京西路1266号恒隆广场1期29F</a></li>
+            </ul>
+        </div>
+        <div class="right divCon">
+            <span>关注我们</span>
+            <div>
+                <img src="./../img/footer/icon-weixin.png" alt="" class="left">
+                <img src="./../img/footer/weibo.png" alt="" class="right">
+            </div>
+        </div>
+    </div>
+
+    <!-- 置顶按钮 -->
+    <a href="#" class="button">^</a>
+
+    <script src="../server/public.js"></script>
+    <script type="module">
+        import RegForm from "./../js/RegForm.js";
+        var xhr, form;
+        var bool = false;
+
+        init();
+        function init() {
+            var login = document.querySelector(".loginbtn");
+            form = document.querySelector("form");
+            var car = document.querySelector(".last");
+            var checkbox = document.querySelector("#checkbox");
+            var tel = document.querySelector("#tel");
+            var password = document.querySelector("#password");
+            // 点击购物车
+            car.addEventListener("click",clickHandler1);
+
+            form.addEventListener("submit", submitHandler);
+            checkbox.addEventListener("click", clickHandler);
+            tel.addEventListener("input", inputHandler);
+            password.addEventListener("input", inputHandler);
+        }
+
+        function clickHandler(e) {
+            var bool1 = checkbox.cheked;
+            return bool = bool1;
+        }
+
+        // 获取cookie
+        var cookie = getCookie("status");
+        function clickHandler1(e){
+            console.log(cookie);
+            if(!cookie){
+                location.href = "cart.html";
+            }else{
+                location.href = "car.html";
+            }
+        }
+
+        function submitHandler(e) {
+            e.preventDefault();
+            if (!RegForm.allFormVerify(form)) e.preventDefault();
+            if (bool === false) return;
+            ajax({
+                url: 'http://localhost:4010/server',
+                type: 'get',
+                data: {
+                    "type": "login",
+                    "tel": tel.value,
+                    "password": password.value,
+                },
+                success: function (data) {
+                    console.log(data);
+                    var data = JSON.parse(data);
+                    if (data.code === "0") {
+                        console.log("登录失败");
+                    } else if (data.code === "1") {
+                        //用cookie存登录状态
+                        setCookie("status",1);
+                        setCookie("uid",data.result[0].uid);
+                        location.href = 'index.html';
+                    }
+                },
+                error: function (data) {
+                    console.log(data);
+                }
+            })
+        }
+
+        function inputHandler(e) {
+            RegForm.inputVerify(this, this.nextElementSibling);
+        }
+
+
+    </script>
+</body>
+
+</html>

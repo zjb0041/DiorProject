@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../dist/init.css">
+    <link rel="stylesheet" href="./../dist/car.css">
+</head>
+
+<body>
+    <!-- header -->
+    <div class="headWarp">
+        <div class="head">
+            <a href="javascript:history.go(-1);" class="back-to-previous">
+                <img src="./../img/create/backBtn.png" alt="">
+            </a>
+            <a href="" class="logo">
+                <img src="./../img/logo.webp" alt="" width="120px" height="34px">
+            </a>
+            <div class="header-group">
+                <a href="" class="icon first" target="_self">
+                    <img src="./../img/create/collect.jpg" alt="">
+                </a>
+                <a href="./login.html" class="icon second" target="_self">
+                    <img src="./../img/create/login.jpg" alt="">
+                </a>
+                <a href="" class="icon last" target="_self">
+                    <img src="./../img/create/car.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 购物车 -->
+    <div id="main">
+        <div class="cart">
+            <div class="bag">购物袋</div>
+            <div class="textCon">迪奥美妆</div>
+            <div class="table2">
+
+            </div>
+        </div>
+        <div class="account">
+            <div class="top">
+                <span class="txt-title">您可以通过以下方式联系我们</span>
+                <div class="col">
+                    <span>迪奥时装</span>
+                    <ul class="tunnel-contacts">
+                        <li>
+                            客户服务热线：400 122 66 22
+                            <br>
+                            (周一至周日 10:00 - 22:00)
+                        </li>
+                        <li>
+                            电子邮件:
+                            <br>
+                            <a href="">
+                                contactdiorasia@dior.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <span>迪奥美妆</span>
+                    <ul class="tunnel-contacts">
+                        <li>
+                            客户服务热线：400 921 88 33
+                            <br>
+                            (周一至周日 9:00 - 21:00)
+                        </li>
+                        <li>
+                            电子邮件:
+                            <br>
+                            <a href="">
+                                ecservice_china@diormail.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom">
+                <span class="pres">Dior迪奥官网购物的特殊礼遇</span>
+                <span>免配送费</span>
+                <span>Dior迪奥美妆订单配以试用装礼赠</span>
+                <span>Dior迪奥艺术包装</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="left divCon">
+            <div class="divWrap">
+                <span class="title">国家/地区</span>
+                <div id="button">
+                    <img src="./../img/create/car.jpg" alt="" class="imgLeft">
+                    <span class="txt">中国大陆</span>
+                    <img src="./../img/footer/svg.jpg" alt="" class="imgRight">
+                </div>
+            </div>
+        </div>
+        <div class="center divCon">
+            <ul class="link-ul">
+                <li class="link_li "><a href="#">联系我们</a></li>
+                <li class="link_li "><a href="#">配送及退货</a></li>
+                <li class="link_li "><a href="#">常见问题</a></li>
+                <li class="link_li "><a href="#">使用条款</a></li>
+                <li class="link_li "><a href="#">数据保护章程</a></li>
+            </ul>
+            <ul class="link-bottom">
+                <li><img src="./../img/footer/business.webp" width="10px" height="10px"><a href="#">电子营业执照</a></li>
+                <li><img src="./../img/footer/icp.webp" width="10px" height="10px"><a href="#">沪公网安备31010602002343号</a>
+                </li>
+                <li><img src="./../img/footer/icp2.webp" width="10px" height="10px"><a href="#">沪ICP备19005922号</a></li>
+                <li><a href="#">尚圃电子商务（上海）有限公司</a></li>
+                <li><a href="#">上海市南京西路1266号恒隆广场1期29F</a></li>
+            </ul>
+        </div>
+        <div class="right divCon">
+            <span>关注我们</span>
+            <div>
+                <img src="./../img/footer/icon-weixin.png" alt="" class="left">
+                <img src="./../img/footer/weibo.png" alt="" class="right">
+            </div>
+        </div>
+    </div>
+
+    <script src="./../server/public.js"></script>
+    <script type="module">
+        // import Car from "./../js/Car.js";
+        import ShoppingList from "./../js/ShoppingList.js";
+        import StepNumber from "./../js/StepNumber.js";
+
+        // var list = [
+        //     {
+        //         "gid": "1001",
+        //         "selected": "false",
+        //         "img": "./../img/list/zw01.jpg",
+        //         "title": "克丽丝汀迪奥节日臻选礼盒",
+        //         "detail": "迷你随行装：真我香氛- 烈艳蓝金唇膏 - 小粉钻精华*，呈献珍藏礼盒",
+        //         "num": 2,
+        //         "price": 600,
+        //         "total":1200,
+        //         "del": "false",
+        //     },
+        //     {
+        //         "gid": "1002", 
+        //         "selected": "false",
+        //         "img": "./../img/list/zw02.jpg", 
+        //         "title": "克丽丝汀迪奥真我香氛节日套装 100ML", 
+        //         "detail": "节日套装:111", 
+        //         "num": 1, 
+        //         "price":1640,
+        //         "total": 1640,
+        //         "del": "false",
+        //     },
+        //     {
+        //         "gid": "1003",
+        //         "selected": "false",
+        //         "img": "./../img/list/zw01.jpg",
+        //         "title": "克丽丝汀迪奥节日臻选礼盒",
+        //         "detail": "迷你随行装：真我香氛- 烈艳蓝金唇膏 - 小粉钻精华*，呈献珍藏礼盒",
+        //         "num": 2,
+        //         "price": 600,
+        //         "total":1200,
+        //         "del": "false",
+        //     },
+        //     {
+        //         "gid": "1004", 
+        //         "selected": "false",
+        //         "img": "./../img/list/zw02.jpg", 
+        //         "title": "克丽丝汀迪奥真我香氛节日套装 100ML", 
+        //         "detail": "节日套装", 
+        //         "num": 1, 
+        //         "price":1640,
+        //         "total": 1640,
+        //         "del": "false",
+        //     }
+        // ]
+
+        var div = document.querySelector(".table2");
+
+        var uid = getCookie("uid");
+        // console.log(uid);
+        ajax({
+                url: 'http://localhost:4010/server',
+                type: 'get',
+                data: {
+                    "type": "selectCar",
+                    "uid":uid,
+                },
+                success: function (data) {
+                    console.log(data);
+                    var list = JSON.parse(data);
+                    
+                    var arr1 = JSON.parse(list.result[0].goodsArr);
+                    let car = new ShoppingList(arr1);
+                    car.appendTo(div);
+
+                },
+                error: function (data) {
+                    console.log(data);
+                }
+            })
+
+
+
+        // let car = new ShoppingList(list);
+        // car.appendTo(div);
+
+
+    //     var setp = new StepNumber(1);
+    //   setp.appendTo("body");
+    </script>
+</body>
+
+</html>
